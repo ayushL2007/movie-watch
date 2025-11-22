@@ -28,12 +28,13 @@ def submit_password():
     password = data.get("password")
 
     # Example logic
-    if password == "a":
+    if password == "230407":
         url = url_for("watcher")
         return jsonify({"message": url}), 200
-    elif password == "b":
+    
+    if password == "190407":
         url = url_for("watcher_lead")
-        return jsonify({"message", url}), 200
+        return jsonify({"message": url}), 200
     else:
         return jsonify({"message": "Invalid password"}), 401
 

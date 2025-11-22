@@ -49,7 +49,7 @@ def stream():
     global timev, state
     def event_stream():
         while True:
-            time.sleep(2)
+            time.sleep(5)
             payload = {"time": timev, "status": state}
             yield f"data: {json.dumps(payload)}\n\n"
     return Response(event_stream(), mimetype="text/event-stream")
